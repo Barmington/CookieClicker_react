@@ -9,12 +9,56 @@ body {
   align-items: center;
 }
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.upgrades {
+  border: 1px solid black;
+  margin: 10px;
+  width: 340px;
+  padding: 10px;
+}
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
 }
+.func_but {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.info {
+  margin: 15px;
+}
+.info p {
+  padding: 10px;
+}
 .title {
-  grid-area: 1/4/2/4;
-  color: aqua;
-  font-size: 2em;
+  color: fuchsia;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+button {
+  background-color: fuchsia;
+  color: white;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+}
+.upgrades button {
+  height: 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 0 10px 0 10px;
+  background-color: rgb(122, 39, 155);
+}
+button:hover {
+  background-color: black;
+  color: fuchsia;
+  font-weight: bolder;
 }

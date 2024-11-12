@@ -12,7 +12,6 @@ export default function App() {
   );
   const [cps, setCps] = useState(0);
   const [upgrades, setUpgrades] = useState([]);
-  // const [currentUpgrade, setCurrentUpgrade] = '';
 
   useEffect(() => {
     async function getUpgrade() {
@@ -40,7 +39,6 @@ export default function App() {
     localStorage.setItem('cps', JSON.stringify(cps));
     // localStorage.clear('cps');
   }, [cps]);
-
   function addCookies() {
     setCookies(cookies + 1);
   }
@@ -66,26 +64,27 @@ export default function App() {
   return (
     <>
       <div className="container">
-        <Title className="title" />
-        <div>
+        <Title />
+
+        <div className="info">
           <p>COOKIES: {cookies}</p>
           <p>CPS {cps}</p>
         </div>
         <div className="func_but">
-          <Reset resetGame={resetGame} />
-
           <GetCookies addCookies={addCookies} />
+          <Reset resetGame={resetGame} />
         </div>
-
-        {upgrades.map(upgrade => (
-          <Upgrades
-            key={upgrade.name}
-            name={upgrade.name}
-            cost={upgrade.cost}
-            increase={upgrade.increase}
-            handleUpgrades={handleUpgrades}
-          />
-        ))}
+        <div className="grid">
+          {upgrades.map(upgrade => (
+            <Upgrades
+              key={upgrade.name}
+              name={upgrade.name}
+              cost={upgrade.cost}
+              increase={upgrade.increase}
+              handleUpgrades={handleUpgrades}
+            />
+          ))}
+        </div>
       </div>
     </>
   );

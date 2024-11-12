@@ -1,10 +1,11 @@
 export default function Upgrades({ name, cost, increase, handleUpgrades }) {
   return (
-    <div>
+    <div className="upgrades">
       <h2>{name}</h2>
-      <p>{cost}</p>
-      <p>{increase}</p>
-      <button onClick={() => handleUpgrades(cost, increase)}>Buy {name}</button>
+      <p>CPS: {increase}</p>
+      <button onClick={() => handleUpgrades(cost, increase)}>
+        Buy at {cost}
+      </button>
     </div>
   );
 }

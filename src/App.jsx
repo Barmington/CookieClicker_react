@@ -68,7 +68,7 @@ export default function App() {
 
         <div className="info">
           <p>COOKIES: {cookies}</p>
-          <p>CPS {cps}</p>
+          <p>CPS: {cps}</p>
         </div>
         <div className="func_but">
           <GetCookies addCookies={addCookies} />
